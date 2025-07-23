@@ -7,9 +7,9 @@ const Education = () => {
     {
       degree: "Bachelor of Science in Computer Science",
       institution: "FAST-NUCES",
-      period: "Current",
-      status: "In Progress",
-      description: "Pursuing comprehensive computer science education with focus on software engineering, algorithms, and modern programming paradigms.",
+      period: "Completed",
+      status: "Graduated",
+      description: "Completed comprehensive computer science education with focus on software engineering, algorithms, and modern programming paradigms.",
       highlights: [
         "Software Engineering & System Design",
         "Data Structures & Algorithms",

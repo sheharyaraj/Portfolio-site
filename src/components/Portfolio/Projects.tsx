@@ -27,9 +27,7 @@ const Projects = () => {
         "Secure patient-therapist messaging",
         "Appointment scheduling system",
         "Cross-platform compatibility"
-      ],
-      status: "Completed",
-      year: "2023"
+      ]
     },
     {
       title: "PaperVault",
@@ -44,9 +42,7 @@ const Projects = () => {
         "User authentication and authorization",
         "Collaborative sharing features",
         "Responsive web interface"
-      ],
-      status: "Completed",
-      year: "2023"
+      ]
     },
     {
       title: "CI/CD Pipeline",
@@ -61,9 +57,7 @@ const Projects = () => {
         "Environment-specific configurations",
         "Rollback capabilities",
         "Monitoring and alerting"
-      ],
-      status: "Completed",
-      year: "2023"
+      ]
     },
     {
       title: "Data Analysis Dashboard",
@@ -78,9 +72,7 @@ const Projects = () => {
         "Custom report generation",
         "Multi-source data integration",
         "Export capabilities"
-      ],
-      status: "In Progress",
-      year: "2024"
+      ]
     }
   ];
 
@@ -119,15 +111,6 @@ const Projects = () => {
                       <p className="text-primary font-medium">{project.category}</p>
                     </div>
                   </div>
-                  <div className="flex flex-col items-end gap-2">
-                    <Badge 
-                      variant={project.status === "Completed" ? "default" : "secondary"}
-                      className={project.status === "Completed" ? "neon-border bg-primary/10" : "glass-card"}
-                    >
-                      {project.status}
-                    </Badge>
-                    <span className="text-sm text-muted-foreground">{project.year}</span>
-                  </div>
                 </div>
               </CardHeader>
               
@@ -163,24 +146,15 @@ const Projects = () => {
                   </div>
                 </div>
                 
-                <div className="flex gap-3 pt-4">
+                <div className="flex justify-center pt-4">
                   <Button 
                     variant="outline" 
                     size="sm"
-                    className="glass-card hover:neon-border flex-1"
+                    className="glass-card hover:neon-border"
                     disabled
                   >
                     <Github className="mr-2 h-4 w-4" />
                     View Code
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    className="glass-card hover:neon-border flex-1"
-                    disabled
-                  >
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    Live Demo
                   </Button>
                 </div>
               </CardContent>

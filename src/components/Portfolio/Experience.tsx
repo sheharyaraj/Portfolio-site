@@ -5,6 +5,21 @@ import { Briefcase, Calendar, MapPin, Users } from 'lucide-react';
 const Experience = () => {
   const experiences = [
     {
+      title: "Software Engineer",
+      company: "CodeNinja",
+      period: "Current",
+      location: "Remote",
+      type: "Full-time",
+      description: [
+        "Developing scalable web applications using modern technologies and frameworks",
+        "Collaborating with cross-functional teams to deliver high-quality software solutions",
+        "Leading technical initiatives and mentoring junior developers",
+        "Implementing best practices for code quality, testing, and deployment",
+        "Working with cloud infrastructure and DevOps tools for efficient development workflows"
+      ],
+      technologies: ["React", "Node.js", "MongoDB", "Express.js", "JavaScript", "AWS", "Docker", "Kubernetes"]
+    },
+    {
       title: "Web Development Intern",
       company: "FastDev Labs",
       period: "2023",

@@ -14,53 +14,43 @@ import {
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Frontend Development",
+      title: "Web Development",
       icon: <Globe className="h-6 w-6" />,
-      skills: ["JavaScript", "React", "TypeScript", "HTML5", "CSS3", "Tailwind CSS"],
+      skills: ["CSS", "Express", "Figma", "HTML", "Javascript", "Node.js", "React"],
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Backend Development", 
-      icon: <Server className="h-6 w-6" />,
-      skills: ["Node.js", "Express.js", "Python", "RESTful APIs", "GraphQL"],
+      title: "Programming Languages", 
+      icon: <Code2 className="h-6 w-6" />,
+      skills: ["C", "C#", "C++", "Dart", "Python", "SQL"],
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Database Technologies",
+      title: "Databases",
       icon: <Database className="h-6 w-6" />,
-      skills: ["MongoDB", "PostgreSQL", "Firebase Firestore", "Redis"],
+      skills: ["Firebase", "MongoDB", "MySQL", "Oracle Database"],
       color: "from-purple-500 to-violet-500"
     },
     {
-      title: "Cloud & DevOps",
+      title: "DevOps & Cloud",
       icon: <Cloud className="h-6 w-6" />,
-      skills: ["AWS", "Docker", "CI/CD", "Git", "Linux", "Kubernetes"],
+      skills: ["AWS EC2", "AWS EKS", "GCP", "Docker", "Kubernetes", "Terraform"],
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Mobile Development",
+      title: "Big Data & Analytics",
       icon: <Smartphone className="h-6 w-6" />,
-      skills: ["Flutter", "Dart", "React Native", "Firebase"],
+      skills: ["Hadoop", "Power BI"],
       color: "from-pink-500 to-rose-500"
     },
     {
-      title: "Tools & Platforms",
-      icon: <Code2 className="h-6 w-6" />,
-      skills: ["VS Code", "Git", "GitHub", "Figma", "Postman", "Jira"],
+      title: "Development Tools",
+      icon: <GitBranch className="h-6 w-6" />,
+      skills: ["Git", "Github", "GitHub Actions"],
       color: "from-indigo-500 to-blue-500"
     }
   ];
 
-  const proficiencyLevels = [
-    { skill: "JavaScript", level: 90 },
-    { skill: "React", level: 85 },
-    { skill: "Node.js", level: 80 },
-    { skill: "Python", level: 75 },
-    { skill: "MongoDB", level: 85 },
-    { skill: "AWS", level: 70 },
-    { skill: "Docker", level: 75 },
-    { skill: "Flutter", level: 80 }
-  ];
 
   return (
     <section id="skills" className="py-20 relative">
@@ -72,66 +62,30 @@ const Skills = () => {
           <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Skills by Category */}
-          <div>
-            <h3 className="text-2xl font-semibold mb-8 text-center lg:text-left">
-              Technologies & <span className="text-primary">Frameworks</span>
-            </h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              {skillCategories.map((category, index) => (
-                <Card key={index} className="interactive-card group">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color} text-white`}>
-                        {category.icon}
-                      </div>
-                      <h4 className="font-semibold text-foreground">{category.title}</h4>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {category.skills.map((skill, skillIndex) => (
-                        <Badge 
-                          key={skillIndex}
-                          variant="secondary"
-                          className="glass-card hover:neon-border transition-all duration-300 hover:scale-105"
-                        >
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-
-          {/* Proficiency Levels */}
-          <div>
-            <h3 className="text-2xl font-semibold mb-8 text-center lg:text-left">
-              Proficiency <span className="text-primary">Levels</span>
-            </h3>
-            <Card className="glass-card">
-              <CardContent className="p-6 space-y-6">
-                {proficiencyLevels.map((item, index) => (
-                  <div key={index} className="space-y-2">
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium text-foreground">{item.skill}</span>
-                      <span className="text-primary font-semibold">{item.level}%</span>
-                    </div>
-                    <div className="w-full bg-muted rounded-full h-2 overflow-hidden">
-                      <div 
-                        className="h-full bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-1000 ease-out animate-glow"
-                        style={{ 
-                          width: `${item.level}%`,
-                          animation: `slideIn 1.5s ease-out ${index * 0.1}s both`
-                        }}
-                      />
-                    </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {skillCategories.map((category, index) => (
+            <Card key={index} className="interactive-card group">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color} text-white`}>
+                    {category.icon}
                   </div>
-                ))}
+                  <h4 className="font-semibold text-foreground">{category.title}</h4>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {category.skills.map((skill, skillIndex) => (
+                    <Badge 
+                      key={skillIndex}
+                      variant="secondary"
+                      className="glass-card hover:neon-border transition-all duration-300 hover:scale-105"
+                    >
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
               </CardContent>
             </Card>
-          </div>
+          ))}
         </div>
       </div>
 
