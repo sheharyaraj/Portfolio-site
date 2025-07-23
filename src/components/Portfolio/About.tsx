@@ -40,7 +40,7 @@ const About = () => {
             <div className="glass-card p-8 rounded-2xl">
               <h3 className="text-2xl font-semibold mb-4 text-primary">Hello World! 👋</h3>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                I'm a passionate Software Engineer and Computer Science student at FAST-NUCES, 
+                I'm a passionate Software Engineer at CodeNinja and a Computer Science graduate from FAST-NUCES, 
                 driven by the endless possibilities that technology offers. My journey in tech 
                 started with curiosity and has evolved into a deep commitment to creating 
                 meaningful digital experiences.

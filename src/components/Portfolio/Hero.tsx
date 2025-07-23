@@ -53,8 +53,7 @@ const Hero = () => {
           </h1>
           
           <div className="text-xl md:text-2xl text-muted-foreground mb-8 font-light">
-            <span className="text-primary">Software Engineer</span> & 
-            <span className="text-primary"> CS Student</span> at FAST-NUCES
+            <span className="text-primary">Software Engineer</span> at CodeNinja
           </div>
           
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">

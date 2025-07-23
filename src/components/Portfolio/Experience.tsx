@@ -8,7 +8,7 @@ const Experience = () => {
       title: "Software Engineer",
       company: "CodeNinja",
       period: "Current",
-      location: "Remote",
+      location: "Lahore",
       type: "Full-time",
       description: [
         "Developing scalable web applications using modern technologies and frameworks",
