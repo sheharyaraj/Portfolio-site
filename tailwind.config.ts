@@ -61,7 +61,23 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Portfolio-specific colors
+				'neon-blue': 'hsl(var(--primary))',
+				'glass': 'hsl(var(--glass-bg))',
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-dark': 'var(--gradient-dark)',
+				'gradient-glow': 'var(--gradient-glow)',
+			},
+			boxShadow: {
+				'glow': 'var(--shadow-glow)',
+				'intense': 'var(--shadow-intense)',
+				'glass': 'var(--shadow-glass)',
+			},
+			fontFamily: {
+				'mono': ['JetBrains Mono', 'Consolas', 'Monaco', 'monospace'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
