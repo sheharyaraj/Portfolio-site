@@ -8,7 +8,8 @@ import {
   Globe, 
   GitBranch,
   Server,
-  Palette
+  Palette,
+  Brain
 } from 'lucide-react';
 
 const Skills = () => {
@@ -22,7 +23,7 @@ const Skills = () => {
     {
       title: "Programming Languages", 
       icon: <Code2 className="h-6 w-6" />,
-      skills: ["C", "C#", "C++", "Dart", "Python", "SQL"],
+      skills: ["C", "C#", "C++", "Dart", "Python", "SQL", ".NET"],
       color: "from-green-500 to-emerald-500"
     },
     {
@@ -36,6 +37,12 @@ const Skills = () => {
       icon: <Cloud className="h-6 w-6" />,
       skills: ["AWS EC2", "AWS EKS", "GCP", "Docker", "Kubernetes", "Terraform"],
       color: "from-orange-500 to-red-500"
+    },
+    {
+      title: "AI & Machine Learning",
+      icon: <Brain className="h-6 w-6" />,
+      skills: ["AI Agents", "MCP Servers"],
+      color: "from-teal-500 to-cyan-500"
     },
     {
       title: "Big Data & Analytics",
