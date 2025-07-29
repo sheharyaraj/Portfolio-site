@@ -33,7 +33,7 @@ const ImpersonationAgentWidget = () => {
 
       {isOpen && (
         <iframe
-          src="https://9dcd067cc274353ffc.gradio.live"
+          src="http://127.0.0.1:7860"
           style={{
             position: 'fixed',
             bottom: '90px',

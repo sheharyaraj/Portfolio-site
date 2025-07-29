@@ -1,5 +1,5 @@
 import Portfolio from '@/components/Portfolio/Portfolio';
-import ImpersonationAgentWidget from '@/components/impersonationAgentWidget';
+import ImpersonationAgentWidget from '@/components/ImpersonationAgentWidget';
 const Index = () => {
   return (
     <div>
