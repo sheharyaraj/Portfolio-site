@@ -37,6 +37,9 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: read
+      packages: write
     steps:
       - uses: actions/checkout@v4
       
@@ -55,10 +58,13 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ env.REGISTRY }}/${{ env.REPO_NAME_LOWER }}/portfolio:latest
+          tags: ${{ env.REGISTRY }}/${{ env.REPO_NAME_LOWER }}:latest
       
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
+      
+      - name: Login Docker for Terraform
+        run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ${{ env.REGISTRY }} -u ${{ github.actor }} --password-stdin
       
       - name: Deploy with Terraform
         run: |
