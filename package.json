@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:dev": "vite build --mode development",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview --host 0.0.0.0 --port 4173",
+    "start": "npm run build && npm run preview",
+    "start:railway": "npm run build && vite preview --host 0.0.0.0 --port $PORT"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
